@@ -47,26 +47,76 @@
   <!-- header.php -->
   <header class="site-header site-header--transparent" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="index.html">
-        <!-- WP: custom_logo · reemplazar por <img class="brand__mark"> -->
-        ARTETOSCO
-        <span class="brand__tag">Taller de madera</span>
+
+      <!-- Logo -->
+      <a class="brand" href="index.html" aria-label="ARTETOSCO">
+
+        <img
+          src="assets/images/logo-artetosco.png"
+          alt="ARTETOSCO - Taller de Madera"
+          class="brand__logo">
+
       </a>
-      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
+
+      <!-- Botón menú móvil -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        data-nav-toggle>
+
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
+
       </button>
+
+      <!-- Navegación -->
       <nav class="nav" aria-label="Menú principal" data-nav>
+
         <ul class="nav__list">
-          <li><a class="nav__link" href="index.html" aria-current="page">Inicio</a></li>
-          <li><a class="nav__link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
-          <li><a class="nav__link" href="productos.html">Productos</a></li>
-          <li><a class="nav__link" href="portfolio.html">Portafolio</a></li>
-          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+
+          <li>
+            <a class="nav__link" href="index.html" aria-current="page">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a class="nav__link" href="sobre-nosotros.html">
+              Sobre Nosotros
+            </a>
+          </li>
+
+          <li>
+            <a class="nav__link" href="servicios.html">
+              Servicios
+            </a>
+          </li>
+
+          <li>
+            <a class="nav__link" href="productos.html">
+              Productos
+            </a>
+          </li>
+
+          <li>
+            <a class="nav__link" href="portfolio.html">
+              Portafolio
+            </a>
+          </li>
+
+          <li>
+            <a class="nav__link" href="contacto.html">
+              Contacto
+            </a>
+          </li>
+
         </ul>
+
       </nav>
+
     </div>
   </header>
 
