@@ -1713,7 +1713,7 @@ p {
   .mobile-only-header img {
     display: block;
 
-    width: 180px !important;
+    width: 200px !important;
     max-width: 58vw !important;
 
     height: auto;
