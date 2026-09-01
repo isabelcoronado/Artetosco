@@ -1711,19 +1711,20 @@ p {
   /* LOGO MÁS COMPACTO */
 
   .mobile-only-header img {
-    display: block;
+    display: block !important;
 
-    width: 200px !important;
-    max-width: 58vw !important;
+    width: 265px !important;
+    max-width: calc(100vw - 24px) !important;
 
-    height: auto;
+    height: auto !important;
 
     margin: 0 auto !important;
     padding: 0 !important;
 
     transform: none !important;
-  }
 
+    object-fit: contain !important;
+  }
 
   /* UBICACIÓN */
 
@@ -2332,38 +2333,139 @@ p {
 
 @media screen and (max-width: 380px) {
 
+  /* -----------------------------------------------------------------------
+     CABECERA
+     ----------------------------------------------------------------------- */
+
   .mobile-only-header {
-    padding:
-      6px 10px 5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 6px 8px 5px !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+
+    background: #f7f4ee !important;
+
+    text-align: center;
   }
+
+
+  /* -----------------------------------------------------------------------
+     LOGO COMPLETO
+     
+     Se deja suficiente ancho para que aparezca:
+     ARTETOSCO + Taller de Madera
+     ----------------------------------------------------------------------- */
 
   .mobile-only-header img {
-    width: 140px !important;
-    max-width: 55vw !important;
+    display: block !important;
+
+    width: 100% !important;
+
+    max-width: 320px !important;
+
+    height: auto !important;
+
+    margin: 0 auto !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    transform: none !important;
+
+    box-sizing: border-box !important;
+
+    overflow: visible !important;
   }
 
+
+  /* -----------------------------------------------------------------------
+     TEXTO DE UBICACIÓN
+     ----------------------------------------------------------------------- */
+
   .mobile-only-header p {
+    margin: 3px 0 0 !important;
+
+    padding: 0 !important;
+
+    color: #8a8177;
+
+    font-family: "Jost", sans-serif;
+
     font-size: 8px;
+
+    line-height: 1.15;
+
+    font-weight: 300;
+
+    text-align: center;
   }
+
+
+  /* -----------------------------------------------------------------------
+     CABECERA CUANDO SE HACE SCROLL
+     ----------------------------------------------------------------------- */
+
+  .mobile-only-header.is-scrolled {
+    background: #f7f4ee !important;
+
+    box-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  .mobile-only-header.is-scrolled p {
+    color: #6f675f;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     TÍTULO DE ORIGEN
+     ----------------------------------------------------------------------- */
 
   .mobile-only-origin-text h1 {
     font-size: 28px;
   }
 
+
+  /* -----------------------------------------------------------------------
+     TEXTO DE ORIGEN
+     ----------------------------------------------------------------------- */
+
   .mobile-only-origin-text p {
     font-size: 11px;
   }
+
+
+  /* -----------------------------------------------------------------------
+     DESCRIPCIÓN DE SERVICIOS
+     ----------------------------------------------------------------------- */
 
   .mobile-only-service p {
     font-size: 10px;
   }
 
 
-  /* IMPORTANTE:
-     NO volver a poner 260px.
-     La barra sigue ocupando todo el teléfono. */
+  /* -----------------------------------------------------------------------
+     MENÚ INFERIOR
+     ----------------------------------------------------------------------- */
 
   .mobile-only-nav {
+    position: fixed !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
     width: 100vw !important;
     min-width: 100vw !important;
     max-width: none !important;
@@ -2372,30 +2474,142 @@ p {
     min-height: 68px !important;
     max-height: 68px !important;
 
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr)) !important;
+
+    background:
+      rgba(247, 244, 238, 0.98) !important;
+
+    border: 0 !important;
+
+    border-top:
+      1px solid #d9cdbc !important;
+
+    border-radius: 0 !important;
+
+    box-shadow:
+      0 -4px 16px rgba(0, 0, 0, 0.08) !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    z-index: 999999 !important;
   }
+
+
+  /* -----------------------------------------------------------------------
+     BOTONES DEL MENÚ
+     ----------------------------------------------------------------------- */
 
   .mobile-only-nav-item {
     width: 100% !important;
 
     height: 68px !important;
+
+    min-width: 0 !important;
+
     min-height: 68px !important;
+
     max-height: 68px !important;
 
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 4px !important;
+
+    border: 0 !important;
+
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    color: #777068 !important;
+
+    font-family: "Jost", sans-serif !important;
+
     font-size: 7px !important;
+
+    line-height: 1.1 !important;
+
+    font-weight: 300 !important;
+
+    letter-spacing: 0.05em !important;
+
+    text-align: center !important;
+
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+
+    -webkit-tap-highlight-color: transparent;
   }
 
+
+  /* -----------------------------------------------------------------------
+     ICONOS DEL MENÚ
+     ----------------------------------------------------------------------- */
+
   .mobile-only-nav-item svg {
+    display: block !important;
+
     width: 19px !important;
     height: 19px !important;
 
     min-width: 19px !important;
     min-height: 19px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+
+    stroke-width: 1.5 !important;
   }
+
+
+  /* -----------------------------------------------------------------------
+     BOTÓN ACTIVO
+     ----------------------------------------------------------------------- */
+
+  .mobile-only-nav-item.active {
+    color: #765d43 !important;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     EFECTO AL TOCAR
+     ----------------------------------------------------------------------- */
+
+  .mobile-only-nav-item:active {
+    background:
+      rgba(169, 131, 90, 0.08) !important;
+  }
+
+
+  /* -----------------------------------------------------------------------
+     ESPACIO PARA QUE EL CONTENIDO NO QUEDE BAJO EL MENÚ
+     ----------------------------------------------------------------------- */
 
   .mobile-only-home {
     padding-bottom: 68px !important;
   }
+
 }
